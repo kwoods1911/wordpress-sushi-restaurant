@@ -1,15 +1,20 @@
-<footer class="bg-gray-200 text-center p-4 mt-10">
+<footer class="bg-gray-200 text-center p-4 mt-10 absolute bottom-0 right-0 left-0 w-full">
         <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
     </footer>
     <?php wp_footer(); ?>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
         const toggleBtn = document.getElementById('menu-toggle');
         const menu = document.getElementById('main-menu');
+
         const bar1 = document.getElementById('bar1');
         const bar2 = document.getElementById('bar2');
         const bar3 = document.getElementById('bar3');
 
+
+
+       
         toggleBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
 
@@ -20,9 +25,13 @@
 
                 bar2.classList.toggle('opacity-0');
 
-                bar3.classList.toggle('- rotate-45');
-                bar3.classList.toggle('- translate-y-2');
+                bar3.classList.toggle('-rotate-45');
+                bar3.classList.toggle('-translate-y-2');
+
+                
         });
+
+    });
     </script>
 </body>
 </html>

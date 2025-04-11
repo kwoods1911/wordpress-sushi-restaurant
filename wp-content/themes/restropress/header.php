@@ -8,7 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="bg-gray-800 text-white">
+    <header class="bg-gray-800 text-white relative z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="text-2xl font-bold">
                 <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
@@ -23,7 +23,7 @@
 
             <!-- Menu -->
             <nav id="main-menu"
-                class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 absolute md:static top-50 left-0 w-full md:w-auto bg-gray-800 md:bg-transparent p-4 md:p-0 z-50 mt-40 md:mt-0">
+                class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 absolute top-full md:static top-50 left-0 w-full md:w-auto bg-gray-800 md:bg-transparent p-4 md:p-0 z-50">
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'primary_menu',
